@@ -1,0 +1,560 @@
+html {
+  background: grey;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Mulish', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #394243;
+}
+body::before {
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url(images/1440.png);
+opacity: .4;
+}
+h1 {
+  font-size: 8vw;
+  font-weight: 900;
+  color: #E73213;
+}
+h2 {
+  font-size: 5.3vw;
+  font-weight: 800;
+  color: #9DBEB7;
+}
+@media screen and (max-width: 414px) {
+  h2 {
+    font-size: 7.2vw;
+  }
+}
+p {
+  font-size: 3.2vw;
+  font-weight: 800;
+  color: #394243;
+}
+* {
+  box-sizing: border-box;
+}
+/* Первый экран */
+.main {
+  height: 65vw;
+  position: relative;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10% 12%;
+  gap: 10vw;
+}
+.content h1:nth-of-type(2) {
+  margin-left: 4vw;
+}
+.content h1:nth-of-type(3) {
+  /* width: 100%; */
+  margin-left: 8vw;
+}
+.circle {
+  position: absolute;
+  border-radius: 100%;
+  background: #9DBEB7;
+}
+.polygon {
+  position: absolute;
+}
+.figures div:nth-of-type(1) {
+  max-width: 374px;
+  max-height: 374px;
+  width: 26vw;
+  height: 26vw;
+  top: -7%;
+  left: -7%;
+  animation: blink 5s linear alternate infinite;
+}
+/* .figures div:nth-of-type(1)::before {
+  content: '';
+  position: absolute;
+  height: 376px;
+  width: 92px;
+  background-color: grey;
+} */
+.figures div:nth-of-type(2) {
+  max-width: 273px;
+  max-height: 273px;
+  width: 19vw;
+  height: 19vw;
+  top: -6%;
+  left: 58%;
+  animation: gradient 6s linear alternate infinite;
+}
+.figures div:nth-of-type(3) {
+  max-width: 202px;
+  max-height: 202px;
+  width: 14vw;
+  height: 14vw;
+  top: 42%;
+  left: 34%;
+  animation: blink 3s linear alternate infinite;
+}
+.figures div:nth-of-type(4) {
+  max-width: 187px;
+  max-height: 187px;
+  width: 13vw;
+  height: 13vw;
+  top: 34%;
+  left: 84%;
+  animation: gradient 3s linear alternate infinite;
+}
+.figures div:nth-of-type(5) {
+  max-width: 274px;
+  max-height: 274px;
+  width: 19vw;
+  height: 19vw;
+  top: 67%;
+  left: 1%;
+  animation: gradient 5s linear alternate infinite;
+}
+.figures div:nth-of-type(6) {
+  max-width: 259px;
+  max-height: 259px;
+  width: 18vw;
+  height: 18vw;
+  top: 64%;
+  left: 57%;
+  animation: blink 3s linear alternate infinite;
+}
+.figures img {
+  position: absolute;
+}
+.figures img:nth-of-type(1) {
+  max-width: 360px;
+  max-height: 288px;
+  width: 25vw;
+  height: 20vw;
+  top: 32%;
+  left: 4%;
+  animation: blink 7s linear alternate infinite;
+}
+.figures img:nth-of-type(2) {
+  max-width: 317px;
+  max-height: 302px;
+  width: 22vw;
+  height: 21vw;
+  top: 2%;
+  left: 32%;
+  animation: blink 8s linear alternate infinite;
+}
+.figures img:nth-of-type(3) {
+  max-width: 374px;
+  max-height: 317px;
+  width: 26vw;
+  height: 22vw;
+  top: 0%;
+  left: 74%;
+  animation: blink 3s linear alternate infinite;
+}
+.figures img:nth-of-type(4) {
+  max-width: 331px;
+  max-height: 259px;
+  width: 23vw;
+  height: 18vw;
+  top: 34%;
+  left: 54%;
+  animation: blink 5s linear alternate infinite;
+}
+.figures img:nth-of-type(5) {
+  max-width: 317px;
+  max-height: 302px;
+  width: 22vw;
+  height: 21vw;
+  top: 68%;
+  left: 26%;
+  animation: blink 7s linear alternate infinite;
+}
+.figures img:nth-of-type(6) {
+  max-width: 317px;
+  max-height: 302px;
+  width: 22vw;
+  height: 21vw;
+  top: 59%;
+  left: 78%;
+  animation: blink 8s linear alternate infinite;
+}
+@keyframes blink {
+  0% {opacity: 100%}
+  100% {opacity: 0}
+}
+@keyframes gradient {
+  0% {background-color: #9DBEB7}
+  100% {background-color: #E73213}
+}
+/* Афиша на ноябрь */
+.announcement {
+  height: 30vw;
+  position: relative;
+}
+.containerrows {
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+.containerrows div {
+  position: absolute;
+  display: block;
+  width: 2880px;
+  height: 100%;
+}
+.containerrows {
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+.containerrows div:nth-of-type(1) {
+  background-image: url('../images/row1.svg');
+  background-repeat: repeat-x;
+  background-size: auto 50%;
+  animation: ribbon 7s linear infinite;
+}
+.containerrows div:nth-of-type(2) {
+  top: 49%;
+  background-image: url('../images/row2.svg');
+  background-repeat: repeat-x;
+  background-size: auto 50%;
+  animation: ribbon 7s linear reverse infinite;
+}
+@keyframes ribbon {
+  0% {right: -1440px;}
+  100% {right: calc(100% - 1440px);}
+}
+.announcement h2 {
+  position: absolute;
+  text-align: center;
+  letter-spacing: 2vw;
+  top: 40%;
+  width: 100%;
+}
+/* Виктор Цой */
+.viktortsoi {
+  height: 54vw;
+  position: relative;
+}
+.viktortsoi-info {
+  display: flex;
+  margin-left: -3vw;
+  flex-direction: row;
+  gap: 3vw;
+  padding: 6vw 0 0 6vw;
+}
+.viktortsoi-name {
+  width: 33vw;
+  height: 7vw;
+  padding: 2vw;
+  background: #E73213;
+  text-align: center;
+  transition: all .3s;
+}
+.viktortsoi-name p {
+  color: #9DBEB7;
+}
+.viktortsoi-name:hover {
+  transform: scale(1.1);
+}
+.viktortsoi-mask {
+  position: absolute;
+  top: 13vw;
+  width: 100%;
+}
+.viktortsoi-lyrics {
+  height: 43vw;
+  position: relative;
+  overflow: hidden;
+}
+.viktortsoi-stroka {
+  position: absolute;
+  display: block;
+  width: 3286px;
+}
+.viktortsoi-stroka:nth-of-type(2n) {
+  animation: tsoirow 6s linear reverse infinite;
+}
+.viktortsoi-stroka:nth-of-type(2n+1) {
+  animation: tsoirow 6s linear infinite;
+}
+.viktortsoi-stroka:nth-of-type(1) {
+  top: 2vw;
+}
+.viktortsoi-stroka:nth-of-type(2) {
+  top: 7vw;
+}
+.viktortsoi-stroka:nth-of-type(3) {
+  top: 12vw;
+}
+.viktortsoi-stroka:nth-of-type(4) {
+  top: 17vw;
+}
+.viktortsoi-stroka:nth-of-type(5) {
+  top: 22vw;
+}
+.viktortsoi-stroka:nth-of-type(6) {
+  top: 27vw;
+}
+.viktortsoi-stroka:nth-of-type(7) {
+  top: 32vw;
+}
+.viktortsoi-stroka:nth-of-type(8) {
+  top: 37vw;
+}
+.viktortsoi-stroka:nth-of-type(9) {
+  top: 42vw;
+}
+@keyframes tsoirow {
+  0% {left: 0%}
+  100% {left: -50%}
+}
+.viktortsoi-photo {
+  position: absolute;
+  top: 9vw;
+  right: 7vw;
+  max-width: 655px;
+  max-height: 655px;
+  width: 45vw;
+  height: 45vw;
+  background-image: url('../images/tsoi1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all .5s
+}
+.viktortsoi-photo:hover {
+  background-image: url("../images/tsoi2.svg");
+}
+/* Яна Дягилева */
+.yanka_dyagileva {
+  height: 59vw;
+  position: relative;
+}
+.yanka_dyagileva-lyrics {
+  width: 100%;
+  height: 46vw;
+  position: relative;
+  overflow: hidden;
+}
+.yanka_dyagileva-stroka {
+  position: absolute;
+  display: block;
+  width: 2954px;
+}
+.yanka_dyagileva-stroka p {
+  color: #9DBEB7;
+}
+.yanka_dyagileva-stroka:nth-of-type(2n) {
+  animation: y-row 6s linear reverse infinite;
+}
+.yanka_dyagileva-stroka:nth-of-type(2n+1) {
+  animation: y-row 6s linear infinite;
+}
+.yanka_dyagileva-stroka:nth-of-type(1) {
+  top: 1vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(2) {
+  top: 6vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(3) {
+  top: 11vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(4) {
+  top: 16vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(5) {
+  top: 21vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(6) {
+  top: 26vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(7) {
+  top: 31vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(8) {
+  top: 36vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(9) {
+  top: 41vw;
+}
+.yanka_dyagileva-stroka:nth-of-type(10) {
+  top: 46vw;
+}
+@keyframes y-row {
+  0% {left: 0%}
+  100% {left: -50%}
+}
+.yanka_dyagileva-mask img {
+  position: absolute;
+  top: -5vw;
+  width: 100%;
+  height: 100%;
+}
+.yanka_dyagileva-photo {
+  position: absolute;
+  top: 11vw;
+  left: 2vw;
+  max-width: 655px;
+  max-height: 655px;
+  width: 45vw;
+  height: 45vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .5s;
+  background-image: url("../images/yanka1.svg")
+}
+.yanka_dyagileva-photo:hover {
+ background-image: url("../images/yanka2.svg")
+}
+.yanka_dyagileva-announce {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4vw;
+  padding: 1vw 3vw;
+}
+.yanka_dyagileva-announce div {
+  padding: 2vw 5vw;
+  background: #E73213;
+  text-align: center;
+  transition: all .3s;
+}
+.yanka_dyagileva-announce div:hover {
+  transform: scale(1.1);
+}
+.yanka_dyagileva-announce div p {
+  color: #9DBEB7;
+}
+/* Михаил Горшенев */
+.gorshenev {
+  height: 66vw;
+  position: relative;
+}
+.gorshenev-lyrics {
+  width: 100%;
+  height: 48vw;
+  position: relative;
+  background: #9DBEB7;
+  overflow: hidden;
+}
+.gorshenev-lyrics div {
+  position: absolute;
+  display: block;
+  width: 3736px;
+}
+.gorshenev-stroka p {
+  color: #E73213;
+}
+.gorshenev-stroka:nth-of-type(2n) {
+  animation: g-row 6s linear reverse infinite;
+}
+.gorshenev-stroka:nth-of-type(2n+1) {
+  animation: g-row 6s linear infinite;
+}
+.gorshenev-stroka:nth-of-type(1) {
+  top: 1vw;
+}
+.gorshenev-stroka:nth-of-type(2) {
+  top: 6vw;
+}
+.gorshenev-stroka:nth-of-type(3) {
+  top: 11vw;
+}
+.gorshenev-stroka:nth-of-type(4) {
+  top: 16vw;
+}
+.gorshenev-stroka:nth-of-type(5) {
+  top: 21vw;
+}
+.gorshenev-stroka:nth-of-type(6) {
+  top: 26vw;
+}
+.gorshenev-stroka:nth-of-type(7) {
+  top: 31vw;
+}
+.gorshenev-stroka:nth-of-type(8) {
+  top: 36vw;
+}
+.gorshenev-stroka:nth-of-type(9) {
+  top: 41vw;
+}
+.gorshenev-stroka:nth-of-type(10) {
+  top: 46vw;
+}
+.gorshenev-mask {
+  width: 100%;
+  height: 49vw;
+  position: absolute;
+  top: -.2vw;
+}
+.gorshenev-mask img {
+  width: 100%;
+  height: 49vw;
+}
+@keyframes g-row {
+  0% {left: 0%}
+  100% {left: -50%}
+}
+.gorshenev-photo {
+  position: absolute;
+  top: 9vw;
+  left: 51vw;
+  max-width: 655px;
+  max-height: 655px;
+  width: 45vw;
+  height: 45vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/gorshenev1.svg');
+  transition: .5s;
+}
+.gorshenev-photo:hover {
+  background-image: url('../images/gorshenev2.svg');
+}
+.gorshenev-announce {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 4vw 3vw;
+}
+.gorshenev-name {
+  padding: 2vw 5vw;
+  background: #E73213;
+  text-align: center;
+  transition: all .3s;
+}
+.gorshenev-name:hover {
+  transform: scale(1.1);
+}
+.gorshenev-name p {
+  color: #9DBEB7;
+}
+/* Подвал */
+.footer {
+  height: 15vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw 3vw;
+  background: #9DBEB7;
+}
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.footer-block p {
+  font-size: 3vw;
+  font-weight: 800;
+  color: #E73213;
+}
